@@ -230,7 +230,7 @@ of inactivity on the socket.
 * `sock`: Duplex stream which can be used for connection hopping/reusing.
 * `irs`: Input record separator. A separator used to distinguish between lines of the response. Defaults to '\r\n'.
 * `ors`: Output record separator. A separator used to execute commands (break lines on input). Defaults to '\n'.
-* `echoLines`: The number of lines used to cut off the response. Defaults to 1.
+* `echoLines`: The number of lines used to cut off the response. Use `echoLines: -1` to cut off all echo lines and get "clear" response (this option can be useful in cases when command build dynamically and you don't know how long it will be in runtime). Defaults to 1.
 * `stripShellPrompt`: Whether shell prompt should be excluded from the results. Defaults to true.
 * `pageSeparator`: The pattern used (and removed from final output) for breaking the number of lines on output. Defaults to '---- More'.
 * `negotiationMandatory`: Disable telnet negotiations if needed. Can be used with 'send' when telnet specification is not needed.
@@ -264,7 +264,7 @@ of inactivity on the socket.
 * `maxBufferLength`: Maximum buffer length in bytes which can be filled with response data. Defaults to 1M.
 * `irs`: Input record separator. A separator used to distinguish between lines of the response. Defaults to '\r\n'.
 * `ors`: Output record separator. A separator used to execute commands (break lines on input). Defaults to '\n'.
-* `echoLines`: The number of lines used to cut off the response. Defaults to 1.
+* `echoLines`: The number of lines used to cut off the response. Use `echoLines: -1` to cut off all echo lines and get "clear" response (this option can be useful in cases when command build dynamically and you don't know how long it will be in runtime). Defaults to 1.
 
 ### connection.send(data, [options], [callback]) -> Promise
 
